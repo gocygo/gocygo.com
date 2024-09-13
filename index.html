@@ -1,59 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gocygo - Under Construction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin:   0;
-            padding:   0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:   100vh;
-            background-color: #f9f9f9;
-        }
-
-        .container {
-            text-align: center;
-            /* Add rounded corners to the container */
-            border-radius:   15px; /* This line adds rounded corners */
-        }
-
-        img {
-            width:   200px;
-            height: auto;
-            margin-bottom:   2rem;
-            /* Add rounded corners to the image */
-            border-radius:   15px; /* Adjust the value as needed */
-            transition: transform  0.3s ease; /* Smooth transition for scaling */
-        }
-
-        img:hover {
-            transform: scale(1.1); /* Slightly larger on hover */
-        }
-
-        h1 {
-            font-size:   3rem;
-            color: #333;
-            margin-bottom:   0.5rem;
-        }
-
-        p {
-            font-size:   1.2rem;
-            color: #666;
-            margin-top:   0;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="logo.png" alt="Gocygo logo">
-        <h1>Gocygo</h1>
-        <p>I'm currently building my new website.</p>
-        <p>Please check back soon!...ish</p>
-    </div>
-</body>
+    <title>Gocygo's Personal Site</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <a href="#">Gocygo</a>
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#blog">Blog</a>
+          </li>
+          <li>
+            <a href="#faq">FAQ</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <!-- Profile Picture -->
+        <div class="image-section">
+          <img src="pfp.png" alt="Profile Picture" class="profile-picture">
+        </div>
+        <h1>Welcome to gocygo</h1>
+        <p>Hi there! I'm Gocygo. Welcome to my personal corner of the internet where I share my thoughts, projects, and things I find cool.</p>
+        <a href="#blog" class="btn">Explore My Blog</a>
+      </div>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <h2>Blog</h2>
+        <div class="blog-posts">
+          <!-- Blog Post 1 -->
+          <article class="post">
+            <h3>Welcome to My Blog</h3>
+            <p>Coming soon! Stay tuned for updates.</p>
+            <!-- <a href="#" class="read-more">Read More</a> -->
+          </article>
+          <!-- Add more blog posts here -->
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-container">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question">What is Gocygo? <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Gocygo is my online alias. It represents my passion for technology, interest, and continuous learning.</p>
+            </div>
+          </div>
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question">How can I collaborate with you? <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer">
+              <p>You can reach out to me via email at <a href="mailto:help@gocygo.com">help@gocygo.com</a> or connect with me on <a href="https://github.com/Gocygo" target="_blank">GitHub</a>. </p>
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question">What tools do you recommend? <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Tools? For what? Contact me.</p>
+            </div>
+          </div>
+          <!-- FAQ Item 4 - Privacy Policy & Terms of Service -->
+          <div class="faq-item">
+            <button class="faq-question">Privacy Policy & Terms of Service <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer">
+              <p>Any information you provide will be sent to Discord using a Discord webhook. For more information, please refer to the <a href="https://discord.com/privacy" target="_blank">Discord Privacy Policy</a>. </p>
+              <p>We do not offer any services right now, so there are no terms of service at this time.</p>
+            </div>
+          </div>
+          <!-- Add more FAQs as needed -->
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for suggestions or just to say hi!</p>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required>
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Your Email - this information is saved</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <p>Email: <a href="mailto:help@Gocygo.com">help@Gocygo.com</a>
+          </p>
+          <p>GitHub: <a href="https://github.com/Gocygo" target="_blank">github.com/Gocygo</a>
+          </p>
+          <!-- Add social media links if applicable -->
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Gocygo. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
 </html>
